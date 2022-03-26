@@ -1,0 +1,30 @@
+[
+  {
+    "userId": 0,
+    "userName": "",
+    "userEmail": "vedwaj@gmail.com",
+    "password": "",
+    "friends": []
+  },
+  {
+    "userId": 0,
+    "userName": "",
+    "userEmail": "vedwaj200@gmail.com",
+    "password": "",
+    "friends": []
+  },
+  {
+    "userId": 0,
+    "userName": "Vedansh",
+    "userEmail": "vd@gmail.com",
+    "password": "1234",
+    "friends": []
+  },
+  {
+    "userId": 0,
+    "userName": "vedanhs bhardwaj",
+    "userEmail": "papa@gmail.com",
+    "password": "1212",
+    "friends": []
+  }
+]
