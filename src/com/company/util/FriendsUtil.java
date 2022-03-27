@@ -66,13 +66,13 @@ public class FriendsUtil {
         return friendsList;
     }
 
-    public static void printFriends(List<User> friends){
-        int friendsSize = friends.size();
+    public static void printFriends(List<User> friendsList){
+        int friendsSize = friendsList.size();
         if (friendsSize == 0)
             System.out.println("You don't have any friends right now !");
         else {
             for (int i = 0; i < friendsSize; i++)
-                        System.out.println(i + "->" + friends.get(i));
+                        System.out.println("-->  "+i+ "\t" + friendsList.get(i));
         }
     }
 }

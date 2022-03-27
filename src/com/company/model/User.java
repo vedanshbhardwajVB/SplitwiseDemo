@@ -83,7 +83,7 @@ public class User {
 
         @Override
         public String toString() {
-            return ("->"+this.title+"->"+this.cost+"->"+this.timeCreated+this.madeBy);
+            return (getTitle()+"\t"+getCost()+"    paid on "+timeCreated.toString()+" for "+paidFor.size()+" people.");
         }
     }
 }
