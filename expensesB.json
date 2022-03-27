@@ -1,0 +1,24 @@
+[
+  {
+    "madeBy": "9428eded-2dde-45de-b417-41fde52513bb",
+    "title": "Tourist guide fee",
+    "cost": 500.0,
+    "paidFor": [
+      "8b64150e-38bd-498a-afaf-93f414685670",
+      "c2aca368-2132-4d81-ae8f-8f657fdc4bb6"
+    ],
+    "timeCreated": {
+      "date": {
+        "year": 2022,
+        "month": 3,
+        "day": 27
+      },
+      "time": {
+        "hour": 20,
+        "minute": 17,
+        "second": 32,
+        "nano": 404000000
+      }
+    }
+  }
+]

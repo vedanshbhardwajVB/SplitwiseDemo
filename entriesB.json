@@ -1,0 +1,40 @@
+[
+  {
+    "userId": "9428eded-2dde-45de-b417-41fde52513bb",
+    "userName": "Vedansh",
+    "userEmail": "vd",
+    "password": "1234",
+    "friends": [
+      "8b64150e-38bd-498a-afaf-93f414685670",
+      "c2aca368-2132-4d81-ae8f-8f657fdc4bb6"
+    ]
+  },
+  {
+    "userId": "8b64150e-38bd-498a-afaf-93f414685670",
+    "userName": "Raj",
+    "userEmail": "rj",
+    "password": "1212",
+    "friends": [
+      "9428eded-2dde-45de-b417-41fde52513bb"
+    ]
+  },
+  {
+    "userId": "c2aca368-2132-4d81-ae8f-8f657fdc4bb6",
+    "userName": "Prashant",
+    "userEmail": "pp",
+    "password": "1212",
+    "friends": [
+      "52c5a1ac-cc96-492e-864d-145eef2885cf",
+      "9428eded-2dde-45de-b417-41fde52513bb"
+    ]
+  },
+  {
+    "userId": "52c5a1ac-cc96-492e-864d-145eef2885cf",
+    "userName": "Abhinav",
+    "userEmail": "ab",
+    "password": "1234",
+    "friends": [
+      "c2aca368-2132-4d81-ae8f-8f657fdc4bb6"
+    ]
+  }
+]

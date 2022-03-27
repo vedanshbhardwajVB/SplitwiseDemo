@@ -3,18 +3,20 @@ package com.company;
 import com.company.io.LoadData;
 import com.company.io.WriteData;
 import com.company.model.User;
+import com.company.util.ExpenseUtil;
+import com.company.util.FriendsUtil;
 import com.company.util.ValidityChecker;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.UUID;
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
         Scanner sc = new Scanner(System.in);
-        List<User> userList = LoadData.loader();
+        List<User> userList = LoadData.userLoader();
         User currentUser=null;
         System.out.println("Welcome to My Splitwise ! \n Enter 0 -> Existing User \n Enter 1-> New User ");
         int choice = sc.nextInt();
@@ -76,75 +78,47 @@ public class Main {
                             "4 -> See your expenses ");
         int menuChoice = sc.nextInt();
         sc.nextLine();
+        // need to load the current expenseList from JSON first
+        List<User.Expense> expenseList = LoadData.expenseLoader();
 
         switch (menuChoice) {
             case 1 :
-                printFriendsList(currentUser, userList);
+                List<User> friends = FriendsUtil.getFriendsOf(currentUser, userList);
+                FriendsUtil.printFriends(friends);
                 break;
             case 2 :
                 if(userList.size() == 1)
                     System.out.println("There are no users except you here. Sorry !");
                 else{
-                    int userToBeFriendsCount=0;
-                    for(int i=0; i<userList.size(); i++){
-                        if(currentUser.equals(userList.get(i)) || currentUser.getFriends().contains(userList.get(i).getUserId()) )
-                            continue;
-                        System.out.println(i+" "+userList.get(i));
-                        userToBeFriendsCount++;
-                    }
-                    if(userToBeFriendsCount == 0){
-                        System.out.println("All users are already your friends.");
-                    }
-                    else{
-                        System.out.println("Choose users from the above list to add to your friend list --->");
-                        System.out.println("How many friends would you like to add ?");
-                        int frndCount=sc.nextInt();
-                        sc.nextLine();
-                        while(frndCount > 0){
-                            System.out.println("Enter the index of user from above list..");
-                            int indexToAdd = sc.nextInt();
-                            sc.nextLine();
-                            System.out.println("Adding user with index number "+indexToAdd+" as your friend "+indexToAdd);
-                            if(  ! currentUser.getFriends().contains(userList.get(indexToAdd).getUserId())){   // add user only if not already added to friends of currentUSer
-                                currentUser.getFriends().add(userList.get(indexToAdd).getUserId());
-                                userList.get(indexToAdd).getFriends().add(currentUser.getUserId());
-                            }
-                            else{
-                                System.out.println(userList.get(indexToAdd).getUserName()+" is already your friend.");
-                            }
-
-                            frndCount--;
-                        }
-                        System.out.println("reached here ");
-                        WriteData.updateFile(userList);
-                    }
+                    // no need to load as friends are already loaded within userList at the start of main function
+                    FriendsUtil.createFriendsFor(currentUser, userList);
+                    WriteData.updateExistingUser(userList);
                 }
                 break;
 
             case 3 :
+
+
+                //if(expenseList.get(0).) System.out.println("Load hokr empty aa rhi");
+                //for(User.Expense e : expenseList)
+                  //  System.out.println(e);
+                if(expenseList == null)
+                    expenseList=new ArrayList<>();
+                ExpenseUtil.createExpense(currentUser, expenseList, userList);
+                System.out.println("Debiugger main ()-> size of this expenseList is"+expenseList.size());
+                WriteData.expenseWriter(expenseList);
+                System.out.println("Expense added from main too!!");
                 break;
+
             case 4 :
+                for(User.Expense ue : expenseList){
+                    if(currentUser.getUserId().equals(ue.getMadeBy())){
+                        System.out.println(ue);
+                    }
+                }
                 break;
             default:
                 System.out.println("\"Oops ! You made a wrong choice, Try Again Later");
-        }
-    }
-
-    public static void printFriendsList(User currentUser, List<User> userList) {
-
-        List<UUID> currentUserFriends = currentUser.getFriends();
-        int friendsSize = currentUserFriends.size();
-        if (friendsSize == 0)
-            System.out.println("You don't have any friends right now !");
-        else {
-            for (int i = 0; i < friendsSize; i++) {
-                UUID currentFriendID = currentUserFriends.get(i);
-                for (User thisUser : userList) {
-                    if (thisUser.getUserId().equals(currentFriendID))
-                        System.out.println(i + "->" + thisUser);
-                }
-
-            }
         }
     }
 }

@@ -1,25 +1,26 @@
 package com.company.model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class User {
-    int userId;
-    String userName;
-    String userEmail;
-    String password;
-    List<User> friends;
-    static int noOfUser=0;
+    private UUID userId;
+    private String userName;
+    private String userEmail;
+    private String password;
+    private List<UUID> friends;
 
     public User(String userName, String userEmail, String password) {
         this.userName = userName;
         this.userEmail = userEmail;
         this.password = password;
         this.friends= new ArrayList<>();
-        this.userId=noOfUser++;
+        this.userId=UUID.randomUUID();
     }
 
-    public int getUserId() {
+    public UUID getUserId() {
         return userId;
     }
 
@@ -35,13 +36,54 @@ public class User {
         return password;
     }
 
-    public List<User> getFriends() {
+    public List<UUID> getFriends() {
         return friends;
     }
 
     @Override
     public String toString() {
-        return (this.userName+"->"+this
-                .userEmail);
+        return (this.userName+"\t"+this.userEmail);
+    }
+    
+    public class Expense {
+        UUID madeBy ;
+        String title;
+        Double cost;
+        List<UUID> paidFor;
+        LocalDateTime timeCreated;
+
+
+        public Expense(String title, Double cost, List<UUID> paidFor) {
+            this.title = title;
+            this.cost = cost;
+            this.paidFor = paidFor;
+            timeCreated=LocalDateTime.now();
+            this.madeBy = getUserId();
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public UUID getMadeBy() {
+            return madeBy;
+        }
+
+        public Double getCost() {
+            return cost;
+        }
+
+        public List<UUID> getPaidFor() {
+            return paidFor;
+        }
+
+        public LocalDateTime getTimeCreated() {
+            return timeCreated;
+        }
+
+        @Override
+        public String toString() {
+            return ("->"+this.title+"->"+this.cost+"->"+this.timeCreated+this.madeBy);
+        }
     }
 }
