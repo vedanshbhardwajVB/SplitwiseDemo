@@ -1,9 +1,44 @@
 [
   {
-    "userId": "1587016a-8bd8-4294-a4ac-bebdd32f6438",
-    "userName": "Vedansh Bhardwaj",
-    "userEmail": "veb@g.com",
+    "userId": "9b465eb7-df72-40bc-8bf1-7cb554e47e3b",
+    "userName": "Naman ",
+    "userEmail": "nam@gmail.com",
+    "password": "1234",
+    "friends": [
+      "1478e928-4e7c-4d70-9bce-e4ee36a9092f",
+      "00c6374b-9957-470b-83f6-e259e144850a",
+      "0ece0452-9b4b-4eec-979d-7dc7cae806d6"
+    ]
+  },
+  {
+    "userId": "1478e928-4e7c-4d70-9bce-e4ee36a9092f",
+    "userName": "Ayush",
+    "userEmail": "ayu@gmail.com",
+    "password": "1234",
+    "friends": [
+      "00c6374b-9957-470b-83f6-e259e144850a",
+      "9b465eb7-df72-40bc-8bf1-7cb554e47e3b",
+      "0ece0452-9b4b-4eec-979d-7dc7cae806d6"
+    ]
+  },
+  {
+    "userId": "00c6374b-9957-470b-83f6-e259e144850a",
+    "userName": "Jai",
+    "userEmail": "jai@gmail.com",
     "password": "1212",
-    "friends": []
+    "friends": [
+      "1478e928-4e7c-4d70-9bce-e4ee36a9092f",
+      "9b465eb7-df72-40bc-8bf1-7cb554e47e3b"
+    ]
+  },
+  {
+    "userId": "0ece0452-9b4b-4eec-979d-7dc7cae806d6",
+    "userName": "Vedansh",
+    "userEmail": "ved@gmail.com",
+    "password": "1212",
+    "friends": [
+      "9b465eb7-df72-40bc-8bf1-7cb554e47e3b",
+      "1478e928-4e7c-4d70-9bce-e4ee36a9092f"
+    ]
   }
 ]

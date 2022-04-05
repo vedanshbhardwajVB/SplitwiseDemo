@@ -21,14 +21,13 @@ public class FriendsUtil {
                 System.out.println(i+" "+userList.get(i));
             }
             System.out.println("-------------------These are the available users yo can add to your friend list-------------------");
-            System.out.println("How many friends would you like to add ?");
+            System.out.println();
             Scanner sc = new Scanner(System.in);
-            int frndCount=sc.nextInt();
-            sc.nextLine();
-            while(frndCount > 0){
-                System.out.println("Enter the index of user from above list..");
+            while(true){
+                System.out.println("Enter the index of user from above list...... \n OR Enter a negative value to stop adding friends ");
                 int indexToAdd = sc.nextInt();
                 sc.nextLine();
+                if(indexToAdd < 0) break;
                 if(currentUser.equals(userList.get(indexToAdd)))
                     System.out.println("You can't add yourself as your friend. Check the index you typed !");
                 else{
@@ -41,7 +40,6 @@ public class FriendsUtil {
                         System.out.println(userList.get(indexToAdd).getUserName()+" is already your friend.");
                     }
                 }
-                frndCount--;
             }
             System.out.println("Great job adding friends !!");
         }

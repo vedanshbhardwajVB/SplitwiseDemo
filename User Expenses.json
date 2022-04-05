@@ -1,1 +1,132 @@
-[]
+[
+  {
+    "madeBy": "1478e928-4e7c-4d70-9bce-e4ee36a9092f",
+    "title": "Dinner",
+    "cost": 1200.0,
+    "paidFor": [
+      "9b465eb7-df72-40bc-8bf1-7cb554e47e3b",
+      "00c6374b-9957-470b-83f6-e259e144850a"
+    ],
+    "timeCreated": {
+      "date": {
+        "year": 2022,
+        "month": 4,
+        "day": 5
+      },
+      "time": {
+        "hour": 10,
+        "minute": 24,
+        "second": 3,
+        "nano": 132000000
+      }
+    }
+  },
+  {
+    "madeBy": "9b465eb7-df72-40bc-8bf1-7cb554e47e3b",
+    "title": "lunch",
+    "cost": 1000.0,
+    "paidFor": [
+      "00c6374b-9957-470b-83f6-e259e144850a",
+      "1478e928-4e7c-4d70-9bce-e4ee36a9092f"
+    ],
+    "timeCreated": {
+      "date": {
+        "year": 2022,
+        "month": 4,
+        "day": 5
+      },
+      "time": {
+        "hour": 10,
+        "minute": 40,
+        "second": 48,
+        "nano": 198000000
+      }
+    }
+  },
+  {
+    "madeBy": "9b465eb7-df72-40bc-8bf1-7cb554e47e3b",
+    "title": "auto fare ",
+    "cost": 250.0,
+    "paidFor": [
+      "00c6374b-9957-470b-83f6-e259e144850a"
+    ],
+    "timeCreated": {
+      "date": {
+        "year": 2022,
+        "month": 4,
+        "day": 5
+      },
+      "time": {
+        "hour": 11,
+        "minute": 28,
+        "second": 37,
+        "nano": 814000000
+      }
+    }
+  },
+  {
+    "madeBy": "0ece0452-9b4b-4eec-979d-7dc7cae806d6",
+    "title": "mountain climbing",
+    "cost": 1600.0,
+    "paidFor": [
+      "9b465eb7-df72-40bc-8bf1-7cb554e47e3b",
+      "1478e928-4e7c-4d70-9bce-e4ee36a9092f"
+    ],
+    "timeCreated": {
+      "date": {
+        "year": 2022,
+        "month": 4,
+        "day": 5
+      },
+      "time": {
+        "hour": 11,
+        "minute": 30,
+        "second": 58,
+        "nano": 450000000
+      }
+    }
+  },
+  {
+    "madeBy": "9b465eb7-df72-40bc-8bf1-7cb554e47e3b",
+    "title": "paani ",
+    "cost": 125.0,
+    "paidFor": [
+      "00c6374b-9957-470b-83f6-e259e144850a"
+    ],
+    "timeCreated": {
+      "date": {
+        "year": 2022,
+        "month": 4,
+        "day": 5
+      },
+      "time": {
+        "hour": 11,
+        "minute": 31,
+        "second": 36,
+        "nano": 419000000
+      }
+    }
+  },
+  {
+    "madeBy": "9b465eb7-df72-40bc-8bf1-7cb554e47e3b",
+    "title": "eraser",
+    "cost": 20.0,
+    "paidFor": [
+      "1478e928-4e7c-4d70-9bce-e4ee36a9092f",
+      "0ece0452-9b4b-4eec-979d-7dc7cae806d6"
+    ],
+    "timeCreated": {
+      "date": {
+        "year": 2022,
+        "month": 4,
+        "day": 5
+      },
+      "time": {
+        "hour": 11,
+        "minute": 48,
+        "second": 53,
+        "nano": 563000000
+      }
+    }
+  }
+]
